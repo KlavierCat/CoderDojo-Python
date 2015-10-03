@@ -7,17 +7,14 @@ def square():
     forward(50)
     right(90)
 
-# call the function to draw a square, or, a few squares
-square()
+# define a function to handle the moving around part to draw the square
+def moveAndDraw(x, y):
+  penup()
+  goto(x, y)
+  pendown()
+  square()
 
-penup()
-goto(90, 90)
-pendown()
-
-square()
-
-penup()
-goto(-90, -90)
-pendown()
-
-square()
+# call the function to draw the squares several times
+moveAndDraw(0, 0)
+moveAndDraw(90, 90)
+moveAndDraw(-90, -90)
